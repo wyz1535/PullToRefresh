@@ -27,10 +27,10 @@ public class MyPullToRefresh extends ListView implements AbsListView.OnScrollLis
         init();
     }
 
+    //初始化头脚
     private void init() {
         initHead();
         initFooter();
-
         setListener();
     }
 
@@ -47,9 +47,7 @@ public class MyPullToRefresh extends ListView implements AbsListView.OnScrollLis
         addHeaderView(head);
     }
 
-
     private void initFooter() {
-
     }
 
     @Override
@@ -62,13 +60,12 @@ public class MyPullToRefresh extends ListView implements AbsListView.OnScrollLis
                 }
                 break;
             case MotionEvent.ACTION_MOVE:
-                int moveY = (int) ev.getY();
+                int moveY =  (int) ev.getY();
                 int dY = moveY - downY;
                 Log.e(TAG, "onTouchEvent: dY" + dY + " downY=" + downY + " moveY=" + moveY);
                 int topY = (int) (-measuredHeight + dY / 3.0);
                 if (isRecord && dY > 0) {
                     head.setPadding(0, topY, 0, 0);
-
 //                    return true;
                 }
                 break;

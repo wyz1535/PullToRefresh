@@ -22,11 +22,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void init() {
         my_ptr = ((MyPullToRefresh) findViewById(R.id.my_ptr));
+
         my_ptr.setAdapter(new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,setDatas()));
     }
 
     private List<String> setDatas() {
         List<String> dataList = new ArrayList<String>();
+
         for (int i = 0; i < 30; i++) {
             dataList.add("乐易付有限公司 "+i);
         }
