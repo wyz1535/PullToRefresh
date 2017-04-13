@@ -7,44 +7,48 @@
     >
 
     <FrameLayout
-        android:layout_marginLeft="5dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp">
 
         <ImageView
-            android:layout_gravity="center"
             android:id="@+id/iv_arrow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:src="@mipmap/arrow" />
 
         <ProgressBar
             android:id="@+id/pg_bar"
-            android:visibility="invisible"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:visibility="invisible" />
 
     </FrameLayout>
 
     <LinearLayout
-        android:layout_weight="1"
-        android:gravity="center"
+        android:paddingTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
-            android:gravity="center"
+            android:id="@+id/tv_state"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="sss"
             android:textColor="#f00"
             android:textSize="26sp" />
 
         <TextView
-            android:gravity="center"
+            android:id="@+id/tv_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="最后刷新时间"
             android:textColor="#D0D0D0" />
     </LinearLayout>
